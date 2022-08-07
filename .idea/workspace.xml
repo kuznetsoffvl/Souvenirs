@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="minor edits in Queries.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Queries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.testGetSouvenirsOfCountry">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Souvenirs" />
@@ -113,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfCountry" />
         <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfCountry" />
         <item itemvalue="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
@@ -134,7 +133,7 @@
       <workItem from="1659803229780" duration="12541000" />
       <workItem from="1659853095896" duration="19115000" />
       <workItem from="1659877624081" duration="19820000" />
-      <workItem from="1659904982230" duration="2226000" />
+      <workItem from="1659904982230" duration="2630000" />
     </task>
     <task id="LOCAL-00001" summary="read/write JSON files">
       <created>1659857744997</created>
@@ -185,7 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659905622388</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="minor edits in Queries.java">
+      <created>1659907456558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659907456558</updated>
+    </task>
+    <task id="LOCAL-00009" summary="minor edits in Queries.java">
+      <created>1659907503423</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659907503423</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

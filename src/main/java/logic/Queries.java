@@ -39,11 +39,6 @@ public class Queries {
         return result;
     }
 
-    private static List<Data> getSouvenirsListByManufacturerName(List<Data> souvenirs, String name) {
-        List<Data> result = souvenirs.stream().filter(s -> name.equals(Queries.getManufacturerName(s))).toList();
-        return result;
-    }
-
     /**Вывести информацию о производителях, чьи цены на сувениры меньше заданной.*/
     public static List<Data> getManufacturersWhosePricesForSouvenirsLessThanSpecified(List<Data> manufacturers, List<Data> souvenirs, int price) {
 
@@ -152,4 +147,8 @@ public class Queries {
         return ((Souvenir) data).getReleaseDate();
     }
 
+    private static List<Data> getSouvenirsListByManufacturerName(List<Data> souvenirs, String name) {
+        List<Data> result = souvenirs.stream().filter(s -> name.equals(Queries.getManufacturerName(s))).toList();
+        return result;
+    }
 }
