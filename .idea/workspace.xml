@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="Query Class released. Refactoring methods from MaiTest to Query" />
+    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="Query Class released. Refactoring methods from MainTest to Query">
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +23,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -60,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest">
+  <component name="RunManager" selected="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Souvenirs" />
@@ -109,9 +112,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" />
         <item itemvalue="JUnit.MainTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" />
         <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
         <item itemvalue="JUnit.MainTest.testGetManufacturersOfSouvenirProducedInGivenYear" />
       </list>
@@ -129,7 +132,7 @@
       <workItem from="1659608366135" duration="7870000" />
       <workItem from="1659803229780" duration="12541000" />
       <workItem from="1659853095896" duration="19115000" />
-      <workItem from="1659877624081" duration="17881000" />
+      <workItem from="1659877624081" duration="18605000" />
     </task>
     <task id="LOCAL-00001" summary="read/write JSON files">
       <created>1659857744997</created>
@@ -152,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659895970064</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Query Class released. Refactoring methods from MaiTest to Query">
+      <created>1659896002063</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659896002063</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Query Class released. Refactoring methods from MainTest to Query">
+      <created>1659896058916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659896058916</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +190,7 @@
     <MESSAGE value="read/write JSON files" />
     <MESSAGE value="All test released" />
     <MESSAGE value="Query Class released. Refactoring methods from MaiTest to Query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Query Class released. Refactoring methods from MaiTest to Query" />
+    <MESSAGE value="Query Class released. Refactoring methods from MainTest to Query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Query Class released. Refactoring methods from MainTest to Query" />
   </component>
 </project>

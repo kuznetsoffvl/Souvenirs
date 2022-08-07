@@ -156,8 +156,8 @@ class MainTest {
         List<Data> mans = List.copyOf(manufacturers);
         List<Data> sous = List.copyOf(souvenirs);
 
-        String mansClassName = mans.get(0).getClass().getName();
-        String sousClassName = sous.get(0).getClass().getName();
+        String mansClassName = Manufacturer.class.getName();
+        String sousClassName = Souvenir.class.getName();
 
         Map<String, List<Data>> resultMap = Queries.deleteSelectedManufacturerAndItsSouvenirs(
                 mans, sous, manToDelete, mansClassName, sousClassName);

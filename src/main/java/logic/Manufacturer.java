@@ -1,7 +1,5 @@
 package logic;
 
-import java.util.List;
-
 public class Manufacturer extends Data implements Comparable {
     private String name;
     private Country country;
@@ -15,7 +13,6 @@ public class Manufacturer extends Data implements Comparable {
         return name;
     }
 
-
     public void setName(String name) {
         this.name = name;
     }
@@ -23,7 +20,6 @@ public class Manufacturer extends Data implements Comparable {
     public Country getCountry() {
         return country;
     }
-
 
     public void setCountry(Country country) {
         this.country = country;
