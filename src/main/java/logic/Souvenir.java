@@ -1,12 +1,14 @@
 package logic;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Souvenir implements Data {
     private String name;
     private String manufacturerName;
     private LocalDate releaseDate;
     private int price;
+    //private int index;
 
     public Souvenir(String name, String manufacturerName, LocalDate releaseDate, int price) {
         this.name = name;
@@ -46,6 +48,7 @@ public class Souvenir implements Data {
     public void setPrice(int price) {
         this.price = price;
     }
+
 
     @Override
     public String toString() {

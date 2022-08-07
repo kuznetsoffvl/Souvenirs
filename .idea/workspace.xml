@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manufacturers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/souvenirs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Manufacturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/ManufacturerList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Souvenir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
+    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="All test released">
+      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Files.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/souvenirs.json" beforeDir="false" afterPath="$PROJECT_DIR$/souvenirs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Manufacturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/ManufacturerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/DataList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Souvenir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Souvenir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Work/Java/IntellijIdea/Souvenirs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/Work/Java/IntellijIdea/Souvenirs",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -76,29 +71,51 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.MainTest">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Souvenirs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testPrintManufacturers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Souvenirs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testPrintManufacturers" />
+      <option name="METHOD_NAME" value="testDeleteSelectedManufacturerAndItsSouvenirs" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testPrintsouvenirs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.testGetSouvenirsGroupedByYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Souvenirs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testPrintsouvenirs" />
+      <option name="METHOD_NAME" value="testGetSouvenirsGroupedByYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testGetSouvenirsOfCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Souvenirs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="testGetSouvenirsOfCountry" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testGetSouvenirsOfManufacturer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Souvenirs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="testGetSouvenirsOfManufacturer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,9 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainTest.testPrintsouvenirs" />
-        <item itemvalue="JUnit.MainTest.testPrintManufacturers" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfCountry" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfManufacturer" />
+        <item itemvalue="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" />
       </list>
     </recent_temporary>
   </component>
@@ -123,8 +142,17 @@
       <workItem from="1659115794561" duration="1211000" />
       <workItem from="1659608366135" duration="7870000" />
       <workItem from="1659803229780" duration="12541000" />
-      <workItem from="1659853095896" duration="710000" />
+      <workItem from="1659853095896" duration="19115000" />
+      <workItem from="1659877624081" duration="10875000" />
     </task>
+    <task id="LOCAL-00001" summary="read/write JSON files">
+      <created>1659857744997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659857744997</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +168,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="read/write JSON files" />
+    <MESSAGE value="All test released" />
+    <option name="LAST_COMMIT_MESSAGE" value="All test released" />
   </component>
 </project>

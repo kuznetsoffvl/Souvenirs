@@ -1,6 +1,8 @@
 package logic;
 
-public class Manufacturer implements Data{
+import java.util.List;
+
+public class Manufacturer implements Data, Comparable {
     private String name;
     private Country country;
 
@@ -13,6 +15,7 @@ public class Manufacturer implements Data{
         return name;
     }
 
+
     public void setName(String name) {
         this.name = name;
     }
@@ -20,6 +23,7 @@ public class Manufacturer implements Data{
     public Country getCountry() {
         return country;
     }
+
 
     public void setCountry(Country country) {
         this.country = country;
@@ -32,4 +36,16 @@ public class Manufacturer implements Data{
                 ", country = " + country +
                 " } ";
     }
+
+    @Override
+    public int compareTo(Object o) {
+        if (this.getClass() != o.getClass()) return getClass().getName().compareTo(o.getClass().getName());
+        Manufacturer man = (Manufacturer) o;
+        int v = name.compareTo(man.name);
+        if (v != 0) return v;
+        v = country.compareTo(man.country);
+        return v;
+    }
+
+
 }
