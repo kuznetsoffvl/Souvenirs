@@ -2,7 +2,7 @@ package logic;
 
 import java.util.List;
 
-public class Manufacturer implements Data, Comparable {
+public class Manufacturer extends Data implements Comparable {
     private String name;
     private Country country;
 

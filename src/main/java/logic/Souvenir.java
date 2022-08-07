@@ -3,7 +3,7 @@ package logic;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Souvenir implements Data {
+public class Souvenir extends Data {
     private String name;
     private String manufacturerName;
     private LocalDate releaseDate;

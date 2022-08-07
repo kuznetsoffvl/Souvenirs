@@ -17,14 +17,16 @@ class MainTest {
     @BeforeEach
     void setUp() {
 
-        List<Data> mans = Main.fillManufacturers();
-        Files.writeDataToFile(mans, Manufacturer.class);
+        // Переинициализируем при необходимости в файлы, потом будем читать из файлов
+        // Если нужно переинициализировать файлы, то раскоментируем код ниже
 
-        List<Data> sous = Main.fillSouvenirs(mans);
-        Files.writeDataToFile(sous, Souvenir.class);
+//        List<Data> mans = Main.fillManufacturers();
+//        Files.writeDataToFile(mans, Manufacturer.class);//
+//        List<Data> sous = Main.fillSouvenirs(mans);
+//        Files.writeDataToFile(sous, Souvenir.class);
 
-        manufacturers = Files.readDataFromFile(Manufacturer.class); //new Main().fillManufacturers();
-        souvenirs = Files.readDataFromFile(Souvenir.class); //new Main().fillSouvenirs(manufacturers);
+        manufacturers = Files.readDataFromFile(Manufacturer.class);
+        souvenirs = Files.readDataFromFile(Souvenir.class);
     }
 
     @AfterEach
@@ -52,7 +54,7 @@ class MainTest {
     void testGetSouvenirsOfManufacturer() {
 
         String manName = "Big Fun";
-        List<Data> result = souvenirs.stream().filter(x -> manName.equals(Queries.getManufacturerName(x))).collect(Collectors.toList());
+        List<Data> result = Queries.getSouvenirsOfManufacturer(souvenirs, manName);
 
         System.out.println(new DataList(result));
 
@@ -66,14 +68,7 @@ class MainTest {
     void testGetSouvenirsOfCountry() {
 
         Country country = Country.UKRAINE;
-        List<String> filteredMansName = manufacturers.stream()
-                .filter(x -> Queries.getCountry(x) == country)
-                .map(Queries::getName)
-                .toList();
-        List<Data> result = souvenirs.stream()
-                .filter(x -> filteredMansName
-                .contains(Queries.getManufacturerName(x)))
-                .toList();
+        List<Data> result = Queries.getSouvenirsOfCountry(manufacturers, souvenirs, country);
 
         System.out.println(new DataList(result));
 
@@ -87,18 +82,11 @@ class MainTest {
     void testGetManufacturersWhosePricesForSouvenirsLessThanSpecified() {
 
         int price = 3;
-        List<String> filteredMansName = souvenirs.stream()
-                .filter(x -> Queries.getPrice(x) < price)
-                .map(Queries::getManufacturerName)
-                .collect(Collectors.toList());
-
-        System.out.println(filteredMansName);
-
-        List<Data> result = manufacturers.stream().filter(x-> filteredMansName.contains(Queries.getName(x))).toList();
+        List<Data> result = Queries.getManufacturersWhosePricesForSouvenirsLessThanSpecified(manufacturers, souvenirs, price);
 
         System.out.println(new DataList(result));
-//        System.out.println(new DataList(manufacturers));
-//        System.out.println(new DataList(souvenirs));
+//      System.out.println(new DataList(manufacturers));
+//      System.out.println(new DataList(souvenirs));
 
         assertEquals(
                 Arrays.asList(manufacturers.get(0), manufacturers.get(1), manufacturers.get(3)),
@@ -111,14 +99,11 @@ class MainTest {
     @Test
     void testGetAllManufacturersAndTheirSouvenirs() {
 
-        DataList mans = new DataList(manufacturers);
-
-        Map<Data, List<Data>> map = souvenirs.stream().collect(Collectors.groupingBy(x -> Queries.getByName(manufacturers, Queries.getManufacturerName(x))));
-
+        Map<Data, List<Data>> result = Queries.getAllManufacturersAndTheirSouvenirs(manufacturers, souvenirs);
 
         // Цикл использую для вывода, чтобы добавить символы табуляции и перевода строк
         StringBuilder stringBuilder = new StringBuilder();
-        for (Map.Entry<Data, List<Data>> entrySet : map.entrySet()) {
+        for (Map.Entry<Data, List<Data>> entrySet : result.entrySet()) {
             stringBuilder.append(entrySet.getKey()).append("\n");
 
             List<Data> sous = entrySet.getValue();
@@ -133,26 +118,22 @@ class MainTest {
     /**Вывести информацию о производителях заданного сувенира, произведенного в заданном году.*/
     @Test
     void testGetManufacturersOfSouvenirProducedInGivenYear() {
+
         int year = 2020;
         Data souvenir = souvenirs.get(13);
 
-        List<Data> result = souvenirs.stream()
-                .filter(s -> s == souvenir)
-                .filter(s -> Queries.getYearOfProduce(s) == year)
-                .map(s -> Queries.getByName(manufacturers, Queries.getManufacturerName(s)))
-                .toList();
+        List<Data> result = Queries.getManufacturersOfSouvenirProducedInGivenYear(manufacturers, souvenirs, year, souvenir);
 
-        System.out.println(new DataList(souvenirs));
         System.out.println(new DataList(result));
+
+        assertEquals(Arrays.asList(manufacturers.get(1)), result);
     }
 
     /**Для каждого года вывести список сувениров, произведенных в этом году.*/
     @Test
     void testGetSouvenirsGroupedByYear() {
 
-        Map<Integer, List<Data>> result = souvenirs.stream()
-                .sorted(Comparator.comparing(Queries::getReleaseDate))
-                .collect(Collectors.groupingBy(Queries::getYearOfProduce));
+        Map<Integer, List<Data>> result = Queries.getSouvenirsGroupedByYear(souvenirs);
 
         // Цикл использую для вывода, чтобы добавить символы табуляции и перевода строк
         StringBuilder stringBuilder = new StringBuilder();
@@ -172,21 +153,26 @@ class MainTest {
 
         Data manToDelete = manufacturers.get(0);
 
-        List<Data> mans = manufacturers.stream()
-                .filter(m -> m != manToDelete)
-                .toList();
+        List<Data> mans = List.copyOf(manufacturers);
+        List<Data> sous = List.copyOf(souvenirs);
 
-        List<Data> sous = souvenirs.stream()
-                .filter(s -> (!Queries.getName(manToDelete).equals(Queries.getManufacturerName(s))))
-                .toList();
+        String mansClassName = mans.get(0).getClass().getName();
+        String sousClassName = sous.get(0).getClass().getName();
+
+        Map<String, List<Data>> resultMap = Queries.deleteSelectedManufacturerAndItsSouvenirs(
+                mans, sous, manToDelete, mansClassName, sousClassName);
+
+        mans = resultMap.get(mansClassName);
+        sous = resultMap.get(sousClassName);
 
         System.out.println(new DataList(mans));
         System.out.println(new DataList(sous));
+        //System.out.println(new DataList(manufacturers));
         //System.out.println(new DataList(souvenirs));
 
         assertEquals(
                 Arrays.asList(manufacturers.get(1), manufacturers.get(2), manufacturers.get(3), manufacturers.get(4), manufacturers.get(5)),
-            mans);
+                mans);
 
         assertEquals(
                 Arrays.asList(
