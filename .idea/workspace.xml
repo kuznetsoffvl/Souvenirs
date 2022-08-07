@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="All test released">
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Files.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/souvenirs.json" beforeDir="false" afterPath="$PROJECT_DIR$/souvenirs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Manufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Manufacturer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/ManufacturerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/DataList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Souvenir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Souvenir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="Query Class released. Refactoring methods from MaiTest to Query" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +61,13 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.MainTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Souvenirs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Souvenirs" />
       <option name="PACKAGE_NAME" value="" />
@@ -91,6 +87,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainTest.testGetManufacturersOfSouvenirProducedInGivenYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Souvenirs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="testGetManufacturersOfSouvenirProducedInGivenYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainTest.testGetSouvenirsGroupedByYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Souvenirs" />
       <option name="PACKAGE_NAME" value="" />
@@ -101,33 +107,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testGetSouvenirsOfCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Souvenirs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testGetSouvenirsOfCountry" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.testGetSouvenirsOfManufacturer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Souvenirs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testGetSouvenirsOfManufacturer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
-        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfCountry" />
-        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfManufacturer" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
+        <item itemvalue="JUnit.MainTest.testGetManufacturersOfSouvenirProducedInGivenYear" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +129,7 @@
       <workItem from="1659608366135" duration="7870000" />
       <workItem from="1659803229780" duration="12541000" />
       <workItem from="1659853095896" duration="19115000" />
-      <workItem from="1659877624081" duration="10875000" />
+      <workItem from="1659877624081" duration="17881000" />
     </task>
     <task id="LOCAL-00001" summary="read/write JSON files">
       <created>1659857744997</created>
@@ -152,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659857744997</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="All test released">
+      <created>1659888964385</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659888964385</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Query Class released. Refactoring methods from MaiTest to Query">
+      <created>1659895970064</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659895970064</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +172,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="read/write JSON files" />
     <MESSAGE value="All test released" />
-    <option name="LAST_COMMIT_MESSAGE" value="All test released" />
+    <MESSAGE value="Query Class released. Refactoring methods from MaiTest to Query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Query Class released. Refactoring methods from MaiTest to Query" />
   </component>
 </project>

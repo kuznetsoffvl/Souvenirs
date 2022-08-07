@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-public class DataList implements Data, Comparable{
+public class DataList implements Comparable{
     private final List<Data> list;
     private int cursor  =-1;
 
@@ -56,4 +56,6 @@ public class DataList implements Data, Comparable{
     public int hashCode() {
         return Objects.hash(list, cursor);
     }
+
+
 }

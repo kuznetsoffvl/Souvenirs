@@ -1,44 +1,32 @@
-import javafx.collections.transformation.FilteredList;
+
 import logic.*;
-
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
-
-import org.json.JSONObject;
-import org.json.JSONArray;
 
 public class Main {
     public static void main(String[] args) {
 
+        // Вся реализация возможнотей прописана в Queries, проверка - в MainTest
+
         new Main().run();
-
-    }
-
-    private void run1() {
-        //System.out.println(LocalDate.parse("2022-10-05", DateTimeFormatter.ofPattern("yyyy-MM-dd")));
     }
 
     private void run(){
 
+        // проверяем, как работают файловые чтение/запись
+
         List<Data> manufacturers = Main.fillManufacturers();
         List<Data> souvenirs = Main.fillSouvenirs(manufacturers);
-
 
         Files.writeDataToFile(manufacturers, Manufacturer.class);
         List<Data> mans = Files.readDataFromFile(Manufacturer.class);
 
         System.out.println(new DataList(mans));
 
-
         Files.writeDataToFile(souvenirs,Souvenir.class);
         List<Data> sous = Files.readDataFromFile(Souvenir.class);
 
         System.out.println(new DataList(sous));
-
     }
 
 
@@ -80,6 +68,4 @@ public class Main {
 
         return list;
     }
-
-
 }

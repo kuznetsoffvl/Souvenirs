@@ -2,6 +2,6 @@ package logic;
 
 import java.util.List;
 
-public interface Data {
-    //String getName();
+public abstract class Data {
+    public abstract String getName();
 }
