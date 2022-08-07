@@ -97,7 +97,7 @@ public class Queries {
                 .filter(s -> (!Queries.getName(manToDelete).equals(Queries.getManufacturerName(s))))
                 .toList();
 
-        Map result = new TreeMap();
+        Map<String, List<Data>> result = new TreeMap<>();
 
         result.put(mansClassName, mans);
         result.put(sousClassName, sous);
@@ -117,8 +117,7 @@ public class Queries {
     }
 
     public static String getName(Data data){
-        if (Manufacturer.class == data.getClass()) return data.getName();
-        if (Souvenir.class == data.getClass()) return data.getName();
+        if (Manufacturer.class == data.getClass() || Souvenir.class == data.getClass()) return data.getName();
         return "";
     }
 
