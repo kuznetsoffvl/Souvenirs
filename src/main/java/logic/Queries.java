@@ -19,15 +19,28 @@ public class Queries {
     /**Вывести информацию о сувенирах, произведенных в заданной стране.*/
     public static List<Data> getSouvenirsOfCountry(List<Data> manufacturers, List<Data> souvenirs, Country country) {
 
-        List<String> filteredMansName = manufacturers.stream()
-                .filter(x -> Queries.getCountry(x) == country)
+//        List<String> filteredMansName = manufacturers.stream()
+//                .filter(x -> Queries.getCountry(x) == country)
+//                .map(Queries::getName)
+//                .toList();
+//        List<Data> result1 = souvenirs.stream()
+//                .filter(x -> filteredMansName
+//                        .contains(Queries.getManufacturerName(x)))
+//                .toList();
+
+        List<Data> result = manufacturers.stream()
+                .filter(m -> Queries.getCountry(m) == country)
                 .map(Queries::getName)
-                .toList();
-        List<Data> result = souvenirs.stream()
-                .filter(x -> filteredMansName
-                        .contains(Queries.getManufacturerName(x)))
+                .distinct()
+                .map(m -> Queries.getSouvenirsListByManufacturerName(souvenirs, m))
+                .flatMap(Collection::stream)
                 .toList();
 
+        return result;
+    }
+
+    private static List<Data> getSouvenirsListByManufacturerName(List<Data> souvenirs, String name) {
+        List<Data> result = souvenirs.stream().filter(s -> name.equals(Queries.getManufacturerName(s))).toList();
         return result;
     }
 
