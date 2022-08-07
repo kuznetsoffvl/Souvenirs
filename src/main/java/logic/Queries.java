@@ -23,7 +23,7 @@ public class Queries {
 //                .filter(x -> Queries.getCountry(x) == country)
 //                .map(Queries::getName)
 //                .toList();
-//        List<Data> result1 = souvenirs.stream()
+//        List<Data> result = souvenirs.stream()
 //                .filter(x -> filteredMansName
 //                        .contains(Queries.getManufacturerName(x)))
 //                .toList();
@@ -52,7 +52,7 @@ public class Queries {
 //                .map(Queries::getManufacturerName)
 //                .collect(Collectors.toList());
 //
-//        List<Data> result1 = manufacturers.stream()
+//        List<Data> result = manufacturers.stream()
 //                .filter(x -> filteredMansName.contains(Queries.getName(x)))
 //                .toList();
 
