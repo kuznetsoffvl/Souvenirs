@@ -1,9 +1,11 @@
 package logic;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Queries {
 
@@ -20,7 +22,7 @@ public class Queries {
     /**Вывести информацию о сувенирах, произведенных в заданной стране.*/
     public static List<Data> getSouvenirsOfCountry(List<Data> manufacturers, List<Data> souvenirs, Country country) {
 
-        // Method 1
+        // Solution 1
 //        List<String> filteredMansName = manufacturers.stream()
 //                .filter(x -> Queries.getCountry(x) == country)
 //                .map(Queries::getName)
@@ -31,7 +33,7 @@ public class Queries {
 //                .toList();
 
 
-        // Method 2
+        // Solution 2
 //        List<Data> result = manufacturers.stream()
 //                .filter(m -> Queries.getCountry(m) == country)
 //                .map(Queries::getName)
@@ -41,7 +43,7 @@ public class Queries {
 //                .distinct()
 //                .toList();
 
-        // Method 3
+        // Solution 3
         List<Data> result = souvenirs.stream()
                 .filter(s -> (manufacturers.stream()
                         .filter(m -> country.equals(Queries.getCountry(m)))
@@ -57,7 +59,7 @@ public class Queries {
     /**Вывести информацию о производителях, чьи цены на сувениры меньше заданной.*/
     public static List<Data> getManufacturersWhosePricesForSouvenirsLessThanSpecified(List<Data> manufacturers, List<Data> souvenirs, int price) {
 
-        // Method 1
+        // Solution 1
 //        List<String> filteredMansName = souvenirs.stream()
 //                .filter(x -> Queries.getPrice(x) < price)
 //                .map(Queries::getManufacturerName)
@@ -67,7 +69,7 @@ public class Queries {
 //                .filter(x -> filteredMansName.contains(Queries.getName(x)))
 //                .toList();
 
-        // Method 2
+        // Solution 2
         List<Data> result = souvenirs.stream()
                 .filter(s -> Queries.getPrice(s) < price)
                 .map(Queries::getManufacturerName)
@@ -123,6 +125,13 @@ public class Queries {
                 .toList();
 
         Map<String, List<Data>> result = new TreeMap<>();
+
+        // Solution 2
+        // returns Map<Manufacturer, List <Souvenir>>
+//        List <Data> mansCopy = List.copyOf(mans);
+//        Map<Data, List<Data>> mapMansAndSouses = sous.stream()
+//                .filter(s -> (!Queries.getName(manToDelete).equals(Queries.getManufacturerName(s))))
+//                .collect(Collectors.groupingBy(x -> Queries.getByName(mansCopy, Queries.getManufacturerName(x))));
 
         result.put(mansClassName, mans);
         result.put(sousClassName, sous);
