@@ -145,6 +145,10 @@ class MainTest {
             }
         }
         System.out.println(stringBuilder);
+
+        assertEquals(
+                Arrays.asList(souvenirs.get(8), souvenirs.get(14), souvenirs.get(1)),
+        result.get(2019));
     }
 
     /**Удалить заданного производителя и его сувениры.*/

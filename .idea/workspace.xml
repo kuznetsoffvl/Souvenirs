@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="add one more solution in getSouvenirsOfCountry() in Queries.java">
+    <list default="true" id="75080b27-cad6-4e65-ada1-62bdd34252fe" name="Changes" comment="add solution 2 in deleteSelectedManufacturerAndItsSouvenirs() in Queries.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.testGetSouvenirsOfCountry">
+  <component name="RunManager" selected="JUnit.MainTest.testGetSouvenirsGroupedByYear">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Souvenirs" />
@@ -113,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfCountry" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
         <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.MainTest.testGetSouvenirsOfCountry" />
         <item itemvalue="JUnit.MainTest.testDeleteSelectedManufacturerAndItsSouvenirs" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainTest.testGetSouvenirsGroupedByYear" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +136,7 @@
       <workItem from="1659877624081" duration="19820000" />
       <workItem from="1659904982230" duration="2837000" />
       <workItem from="1659954105067" duration="81000" />
-      <workItem from="1659954196142" duration="2233000" />
+      <workItem from="1659954196142" duration="3632000" />
     </task>
     <task id="LOCAL-00001" summary="read/write JSON files">
       <created>1659857744997</created>
@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659955468402</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add solution 2 in deleteSelectedManufacturerAndItsSouvenirs() in Queries.java">
+      <created>1659957038351</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659957038351</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +247,7 @@
     <MESSAGE value="minor edits in MainTest" />
     <MESSAGE value="minor edits in Queries.java" />
     <MESSAGE value="add one more solution in getSouvenirsOfCountry() in Queries.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="add one more solution in getSouvenirsOfCountry() in Queries.java" />
+    <MESSAGE value="add solution 2 in deleteSelectedManufacturerAndItsSouvenirs() in Queries.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add solution 2 in deleteSelectedManufacturerAndItsSouvenirs() in Queries.java" />
   </component>
 </project>
