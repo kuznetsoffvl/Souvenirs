@@ -3,6 +3,7 @@ package logic;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Queries {
 
@@ -19,6 +20,7 @@ public class Queries {
     /**Вывести информацию о сувенирах, произведенных в заданной стране.*/
     public static List<Data> getSouvenirsOfCountry(List<Data> manufacturers, List<Data> souvenirs, Country country) {
 
+        // Method 1
 //        List<String> filteredMansName = manufacturers.stream()
 //                .filter(x -> Queries.getCountry(x) == country)
 //                .map(Queries::getName)
@@ -28,12 +30,25 @@ public class Queries {
 //                        .contains(Queries.getManufacturerName(x)))
 //                .toList();
 
-        List<Data> result = manufacturers.stream()
-                .filter(m -> Queries.getCountry(m) == country)
-                .map(Queries::getName)
-                .distinct()
-                .map(m -> Queries.getSouvenirsListByManufacturerName(souvenirs, m))
-                .flatMap(Collection::stream)
+
+        // Method 2
+//        List<Data> result = manufacturers.stream()
+//                .filter(m -> Queries.getCountry(m) == country)
+//                .map(Queries::getName)
+//                .distinct()
+//                .map(m -> Queries.getSouvenirsListByManufacturerName(souvenirs, m))
+//                .flatMap(Collection::stream)
+//                .distinct()
+//                .toList();
+
+        // Method 3
+        List<Data> result = souvenirs.stream()
+                .filter(s -> (manufacturers.stream()
+                        .filter(m -> country.equals(Queries.getCountry(m)))
+                        .map(Data::getName))
+                        .distinct()
+                        .toList()
+                        .contains(Queries.getManufacturerName(s)))
                 .toList();
 
         return result;
@@ -42,6 +57,7 @@ public class Queries {
     /**Вывести информацию о производителях, чьи цены на сувениры меньше заданной.*/
     public static List<Data> getManufacturersWhosePricesForSouvenirsLessThanSpecified(List<Data> manufacturers, List<Data> souvenirs, int price) {
 
+        // Method 1
 //        List<String> filteredMansName = souvenirs.stream()
 //                .filter(x -> Queries.getPrice(x) < price)
 //                .map(Queries::getManufacturerName)
@@ -51,6 +67,7 @@ public class Queries {
 //                .filter(x -> filteredMansName.contains(Queries.getName(x)))
 //                .toList();
 
+        // Method 2
         List<Data> result = souvenirs.stream()
                 .filter(s -> Queries.getPrice(s) < price)
                 .map(Queries::getManufacturerName)
